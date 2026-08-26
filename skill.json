@@ -1,0 +1,38 @@
+{
+  "name": "genpark-embedded-vector-hnsw-nearest-neighbor-index-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Embedded vector database manager constructing HNSW index graphs and cosine similarity rankers.",
+  "author": "genpark",
+  "category": "vector-database",
+  "tags": [
+    "chroma-db",
+    "hnsw-index",
+    "vector-search",
+    "approximate-nearest-neighbor",
+    "embedding-store"
+  ],
+  "inputs": {
+    "query_embedding_dimension": {
+      "type": "integer"
+    },
+    "top_k": {
+      "type": "integer"
+    },
+    "collection_size": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "index_query_id": {
+      "type": "string"
+    },
+    "recall_rate_at_k_pct": {
+      "type": "number"
+    },
+    "query_latency_microseconds": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
